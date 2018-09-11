@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+#sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_fixed#about
+    padding-top: 20px;
+}
+
+#sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+#sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="sidenav">
+  <a id ="1" href="#">About</a>
+  <a id ="2" href="#">Services</a>
+  <a id ="3" href="#">Clients</a>
+</div>
+
+<div id="main">
+        <div id="1" class="mydivshow">1111hjg</div>
+        <div id="2" class="mydivhide">2222</div>
+        <div id="3" class="mydivhide">3333</div>
+</div>
+<script>
+$("#sidenav a").click(function() {
+    var id = $(this).attr("id");
+    $("#main div").css("display", "none");
+    $("#main div#" + id + "").css("display", "block");
+});
+</script>
+</body>
+</html> 
